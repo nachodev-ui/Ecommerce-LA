@@ -1,0 +1,49 @@
+---
+import Layout from "../layouts/Layout.astro"
+import nosotros from "/img/nosotros.jpg"
+---
+
+<Layout
+  title="Nosotros"
+  description="GuitarLA, tienda de guitarras, música, blogs y más."
+>
+  <main class="contenedor">
+    <h1 class="heading">Nosotros</h1>
+
+    <div class="contenido">
+      <img src={nosotros} alt=`Imagen sobre nosotros` />
+
+      <div>
+        <p>
+          Duis luctus vel est nec commodo. Aliquam sapien magna, volutpat quis
+          accumsan vel, cursus aliquet odio. Integer imperdiet leo vitae porta
+          blandit.
+        </p>
+
+        <p>
+          Maecenas eget nunc nisi. Cras massa odio, volutpat vehicula aliquam
+          eu, pellentesque ut justo. Integer imperdiet leo vitae porta
+          blandit.
+        </p>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .contenido {
+    display: grid;
+    gap: 4rem;
+  }
+
+  @media (min-width: 768px) {
+    .contenido {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
+  }
+
+  p:first-child {
+    margin-bottom: 5rem;
+  }
+</style>
